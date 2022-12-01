@@ -1,0 +1,20 @@
+
+<!DOCTYPE html>
+<html lang="pt_br">
+    <head>
+        <meta charset="UTF-8">
+            <title>Cadastro</title>
+        </head>
+        <body>
+            <form action='/cadastrar' method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                Nome: {{form.nome }}
+                <br>
+                Curso: {{form.curso }}
+                <br>
+                Idade: {{form.idade }}
+                <br>
+                    <input type="submit" value="Cadastro"/>              
+            </form>
+        </body>
+</html>
